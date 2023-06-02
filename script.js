@@ -110,15 +110,177 @@ $(function () {
   // current hour in 24-hour time?
 
   function dayProgression() {
-    var time;
+    var currentTime = dayjs().hour();
+    var test = typeof (currentTime);
+    console.log(test);
+    console.log('current time is: ' + currentTime);
+    function nineAmCheck() {
+      if (currentTime < 9) { // before 9 class is future
+        $('#hour-9').removeClass("past");
+        $('#hour-9').removeClass("present");
+        $('#hour-9').addClass('future');
+      }
+      else if (currentTime === 9) { // at 9 class is present
+        $('#hour-9').removeClass("past");
+        $('#hour-9').removeClass('future');
+        $('#hour-9').addClass("present");
+      }
+      else if (currentTime > 9) { //after 9 is class past
+        $('#hour-9').removeClass("present");
+        $('#hour-9').removeClass('future');
+        $('#hour-9').addClass("past");
+      }
 
-
-
-
-
-
+    }
+    function tenAmCheck() {
+      if (currentTime < 10) { // before 10 class is future
+        $('#hour-10').removeClass("past");
+        $('#hour-10').removeClass("present");
+        $('#hour-10').addClass('future');
+      }
+      else if (currentTime === 10) { // at 10 class is present
+        $('#hour-10').removeClass("past");
+        $('#hour-10').removeClass('future');
+        $('#hour-10').addClass("present");
+      }
+      else if (currentTime > 10) { //after 10 is class past
+        $('#hour-10').removeClass("present");
+        $('#hour-10').removeClass('future');
+        $('#hour-10').addClass("past");
+      }
+    }
+    function elevenAmCheck() {
+      if (currentTime < 11) { // before 11 class is future
+        $('#hour-11').removeClass("past");
+        $('#hour-11').removeClass("present");
+        $('#hour-11').addClass('future');
+      }
+      else if (currentTime === 11) { // at 11 class is present
+        $('#hour-11').removeClass("past");
+        $('#hour-11').removeClass('future');
+        $('#hour-11').addClass("present");
+      }
+      else if (currentTime > 11) { //after 11 is class past
+        $('#hour-11').removeClass("present");
+        $('#hour-11').removeClass('future');
+        $('#hour-11').addClass("past");
+      }
+    }
+    function twelveAmCheck() {
+      if (currentTime < 12) { // before 12 class is future
+        $('#hour-12').removeClass("past");
+        $('#hour-12').removeClass("present");
+        $('#hour-12').addClass('future');
+      }
+      else if (currentTime === 12) { // at 12 class is present
+        $('#hour-12').removeClass("past");
+        $('#hour-12').removeClass('future');
+        $('#hour-12').addClass("present");
+      }
+      else if (currentTime > 12) { //after 12 is class past
+        $('#hour-12').removeClass("present");
+        $('#hour-12').removeClass('future');
+        $('#hour-12').addClass("past");
+      }
+    }
+    function onePmCheck() {
+      if (currentTime < 13) { // before 13 class is future
+        $('#hour-13').removeClass("past");
+        $('#hour-13').removeClass("present");
+        $('#hour-13').addClass('future');
+      }
+      else if (currentTime === 13) { // at 13 class is present
+        $('#hour-13').removeClass("past");
+        $('#hour-13').removeClass('future');
+        $('#hour-13').addClass("present");
+      }
+      else if (currentTime > 13) { //after 13 is class past
+        $('#hour-13').removeClass("present");
+        $('#hour-13').removeClass('future');
+        $('#hour-13').addClass("past");
+      }
+    }
+    function twoPmCheck() {
+      if (currentTime < 14) { // before 14 class is future
+        $('#hour-14').removeClass("past");
+        $('#hour-14').removeClass("present");
+        $('#hour-14').addClass('future');
+      }
+      else if (currentTime === 14) { // at 14 class is present
+        $('#hour-14').removeClass("past");
+        $('#hour-14').removeClass('future');
+        $('#hour-14').addClass("present");
+      }
+      else if (currentTime > 14) { //after 14 is class past
+        $('#hour-14').removeClass("present");
+        $('#hour-14').removeClass('future');
+        $('#hour-14').addClass("past");
+      }
+    }
+    function threePmCheck() {
+      if (currentTime < 15) { // before 15 class is future
+        $('#hour-15').removeClass("past");
+        $('#hour-15').removeClass("present");
+        $('#hour-15').addClass('future');
+      }
+      else if (currentTime === 15) { // at 15 class is present
+        $('#hour-15').removeClass("past");
+        $('#hour-15').removeClass('future');
+        $('#hour-15').addClass("present");
+      }
+      else if (currentTime > 15) { //after 15 is class past
+        $('#hour-15').removeClass("present");
+        $('#hour-15').removeClass('future');
+        $('#hour-15').addClass("past");
+      }
+    }
+    function fourPmCheck() {
+      if (currentTime < 16) { // before 16 class is future
+        $('#hour-16').removeClass("past");
+        $('#hour-16').removeClass("present");
+        $('#hour-16').addClass('future');
+      }
+      else if (currentTime === 16) { // at 16 class is present
+        $('#hour-16').removeClass("past");
+        $('#hour-16').removeClass('future');
+        $('#hour-16').addClass("present");
+      }
+      else if (currentTime > 16) { //after 16 is class past
+        $('#hour-16').removeClass("present");
+        $('#hour-16').removeClass('future');
+        $('#hour-16').addClass("past");
+      }
+    }
+    function fivePmCheck() {
+      if (currentTime < 17) { // before 17 class is future
+        $('#hour-17').removeClass("past");
+        $('#hour-17').removeClass("present");
+        $('#hour-17').addClass('future');
+      }
+      else if (currentTime === 17) { // at 17 class is present
+        $('#hour-17').removeClass("past");
+        $('#hour-17').removeClass('future');
+        $('#hour-17').addClass("present");
+      }
+      else if (currentTime > 17) { //after 17 is class past
+        $('#hour-17').removeClass("present");
+        $('#hour-17').removeClass('future');
+        $('#hour-17').addClass("past");
+      }
+    }
+    nineAmCheck();
+    tenAmCheck();
+    elevenAmCheck();
+    twelveAmCheck();
+    onePmCheck();
+    twoPmCheck();
+    threePmCheck();
+    fourPmCheck();
+    fivePmCheck();
   }
   dayProgression();
+
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
