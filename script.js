@@ -16,7 +16,7 @@ $(function () {
     //saves 9am content
     var saved9am = $("#9amPlans").val();
     localStorage.setItem("saved9am", saved9am);
-    console.log("saved9am: at button " + saved9am);
+    console.log("saved9am: " + saved9am);
   });
   saveButton2.on("click", function () {
     //saves 10 am content
@@ -63,7 +63,6 @@ $(function () {
   function loadSchedule() {
     //loads locally stored plans
     var nineAmAct = localStorage.getItem("saved9am");
-    console.log("nineAmAct:  at loadschedule " + nineAmAct);
     $("#9amPlans").val(nineAmAct);
 
     var tenAmAct = localStorage.getItem("saved10am");
@@ -94,8 +93,6 @@ $(function () {
 
   function dayProgression() {
     var currentTime = dayjs().hour();
-    var test = typeof (currentTime);
-    console.log(test);
     console.log('current time is: ' + currentTime);
     function nineAmCheck() {
       if (currentTime < 9) { // before 9 class is future
