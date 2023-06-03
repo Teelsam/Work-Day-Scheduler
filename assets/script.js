@@ -11,7 +11,7 @@ $(function () {
   var saveButton9 = $("#saveBtn9"); //nineth hour  save button
 
   var today = dayjs().format("MMM DD, YYYY [at] hh:mm:ss a");
-
+  // These event listeners save to local storage whatever text is placed in its hour pannel
   saveButton1.on("click", function () {
     //saves 9am content
     var saved9am = $("#9amPlans").val();
@@ -64,37 +64,29 @@ $(function () {
     //loads locally stored plans
     var nineAmAct = localStorage.getItem("saved9am");
     $("#9amPlans").val(nineAmAct);
-
     var tenAmAct = localStorage.getItem("saved10am");
     $("#10amPlans").val(tenAmAct);
-
     var elevenAmAct = localStorage.getItem("saved11am");
     $("#11amPlans").val(elevenAmAct);
-
     var twelveAmAct = localStorage.getItem("saved12pm");
     $("#12pmPlans").val(twelveAmAct);
-
     var onePmAct = localStorage.getItem("saved1pm");
     $("#1pmPlans").val(onePmAct);
-
     var twoPmAct = localStorage.getItem("saved2pm");
     $("#2pmPlans").val(twoPmAct);
-
     var threePmAct = localStorage.getItem("saved3pm");
     $("#3pmPlans").val(threePmAct);
-
     var fourPmAct = localStorage.getItem("saved4pm");
     $("#4pmPlans").val(fourPmAct);
-
     var fivePmAct = localStorage.getItem("saved5pm");
     $("#5pmPlans").val(fivePmAct);
   }
-  loadSchedule();
+  loadSchedule();//calls function holding scheduled plans
 
-  function dayProgression() {
+  function dayProgression() {// this function changes the color of hour pannels by time frame.
     var currentTime = dayjs().hour();
     console.log('current time is: ' + currentTime);
-    function nineAmCheck() {
+    function nineAmCheck() {//checks current time against 9amcheck
       if (currentTime < 9) { // before 9 class is future
         $('#hour-9').removeClass("past");
         $('#hour-9').removeClass("present");
@@ -112,7 +104,7 @@ $(function () {
       }
 
     }
-    function tenAmCheck() {
+    function tenAmCheck() {//checks current time against 10amcheck
       if (currentTime < 10) { // before 10 class is future
         $('#hour-10').removeClass("past");
         $('#hour-10').removeClass("present");
@@ -129,7 +121,7 @@ $(function () {
         $('#hour-10').addClass("past");
       }
     }
-    function elevenAmCheck() {
+    function elevenAmCheck() {//checks current time against 11amcheck
       if (currentTime < 11) { // before 11 class is future
         $('#hour-11').removeClass("past");
         $('#hour-11').removeClass("present");
@@ -146,7 +138,7 @@ $(function () {
         $('#hour-11').addClass("past");
       }
     }
-    function twelveAmCheck() {
+    function twelveAmCheck() {//checks current time against 12pmcheck
       if (currentTime < 12) { // before 12 class is future
         $('#hour-12').removeClass("past");
         $('#hour-12').removeClass("present");
@@ -163,7 +155,7 @@ $(function () {
         $('#hour-12').addClass("past");
       }
     }
-    function onePmCheck() {
+    function onePmCheck() {//checks current time against 1pmcheck
       if (currentTime < 13) { // before 13 class is future
         $('#hour-13').removeClass("past");
         $('#hour-13').removeClass("present");
@@ -180,7 +172,7 @@ $(function () {
         $('#hour-13').addClass("past");
       }
     }
-    function twoPmCheck() {
+    function twoPmCheck() {//checks current time against 2pmcheck
       if (currentTime < 14) { // before 14 class is future
         $('#hour-14').removeClass("past");
         $('#hour-14').removeClass("present");
@@ -197,7 +189,7 @@ $(function () {
         $('#hour-14').addClass("past");
       }
     }
-    function threePmCheck() {
+    function threePmCheck() {//checks current time against 3pmcheck
       if (currentTime < 15) { // before 15 class is future
         $('#hour-15').removeClass("past");
         $('#hour-15').removeClass("present");
@@ -214,7 +206,7 @@ $(function () {
         $('#hour-15').addClass("past");
       }
     }
-    function fourPmCheck() {
+    function fourPmCheck() {//checks current time against 4pmcheck
       if (currentTime < 16) { // before 16 class is future
         $('#hour-16').removeClass("past");
         $('#hour-16').removeClass("present");
@@ -231,7 +223,7 @@ $(function () {
         $('#hour-16').addClass("past");
       }
     }
-    function fivePmCheck() {
+    function fivePmCheck() { //checks current time against 5pmcheck
       if (currentTime < 17) { // before 17 class is future
         $('#hour-17').removeClass("past");
         $('#hour-17').removeClass("present");
@@ -248,6 +240,7 @@ $(function () {
         $('#hour-17').addClass("past");
       }
     }
+    //runs the hour checks
     nineAmCheck();
     tenAmCheck();
     elevenAmCheck();
@@ -258,13 +251,13 @@ $(function () {
     fourPmCheck();
     fivePmCheck();
   }
-  dayProgression();
-  function dateAndTime() {
+  dayProgression();//calls the hour check function
+  function dateAndTime() { //loads the date and time
     //gets our date and time
     var today = dayjs().format("MMM DD, YYYY [at] hh:mm:ss a");
     $("#currentDay").text(today);
   }
-  dateAndTime();
+  dateAndTime();//calls date and time function
   setInterval(dateAndTime, 1000); // updates date and time by the second
   setInterval(dayProgression, 3600000)//refreshes every hour
 });
