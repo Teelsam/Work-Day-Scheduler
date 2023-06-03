@@ -16,3 +16,10 @@ as well as a screenshot of the live site.
 ## ScreenShot
 
 ![site](./assets/ScreenShot.png)
+
+## Third Party APIs and Fonts
+
+[Jquery](https://api.jquery.com/)
+[DayJs](https://day.js.org/en/)
+[google Fonts](https://fonts.google.com/)
+[font awesome](https://fontawesome.com)
