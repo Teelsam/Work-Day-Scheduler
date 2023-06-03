@@ -11,7 +11,7 @@ $(function () {
   var saveButton9 = $("#saveBtn9"); //nineth hour  save button
 
   var today = dayjs().format("MMM DD, YYYY [at] hh:mm:ss a");
-  // These event listeners save to local storage whatever text is placed in its hour pannel
+  // These event listeners save to local storage whatever text is placed in its hour panel
   saveButton1.on("click", function () {
     //saves 9am content
     var saved9am = $("#9amPlans").val();
@@ -83,7 +83,7 @@ $(function () {
   }
   loadSchedule();//calls function holding scheduled plans
 
-  function dayProgression() {// this function changes the color of hour pannels by time frame.
+  function dayProgression() {// this function changes the color of hour panels by time frame.
     var currentTime = dayjs().hour();
     console.log('current time is: ' + currentTime);
     function nineAmCheck() {//checks current time against 9amcheck
