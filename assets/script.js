@@ -46,7 +46,7 @@ $(function () {
   });
   saveButton7.on("click", function () {
     var saved3pm = $("#3pmPlans").val();
-    console.log("saved2pm: " + saved3pm);
+    console.log("saved3pm: " + saved3pm);
     localStorage.setItem("saved3pm", saved3pm);
   });
   saveButton8.on("click", function () {
