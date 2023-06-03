@@ -269,4 +269,5 @@ $(function () {
   }
   dateAndTime();
   setInterval(dateAndTime, 1000); // updates date and time by the second
+  setInterval(dayProgression, 3600000)//refreshes every hour
 });
