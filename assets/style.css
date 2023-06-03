@@ -1,23 +1,23 @@
-header {
+header { /*styles header and its text*/
   background-color: cadetblue;
   color:thistle;
 }
-header p {
+header p { /*styles smaller header content*/
   color:honeydew;
 }
-#currentDay{
+#currentDay{ /*styles date content*/
   border-style: dashed;
   border-color: #000000;
   padding: 5px;
   display: inline;
 
 }
-body {
+body {/*styles the font for the sites body*/
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
-textarea {
+textarea {/*styles the hour panels text space*/
   background: transparent;
   border: none;
   resize: none;
@@ -26,44 +26,44 @@ textarea {
   padding: 10px;
 }
 
-.description {
+.description {/*styles text areas white space*/
   white-space: pre-wrap;
 }
 
-.time-block {
+.time-block {/*Styles timeblocks border*/
   border-radius: 15px;
 }
 
-.row {
+.row {/*styles each rows border*/
   border-top: 1px solid white;
 }
 
-.hour {
+.hour {/*styles the hour section*/
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
-.past {
+.past {/*styles the past hour panels*/
   background-color: #d3d3d3;
   color: white;
 }
 
-.present {
+.present { /*styles the present panel*/
   background-color:wheat;
   color: white;
 }
-.present textarea{
+.present textarea{ /*stles the border of the present panel*/
   border-style: solid;
   border-color:cornflowerblue;
 }
 
-.future {
+.future {/*Styles the future panels*/
   background-color: #77dd77;
   color: white;
 }
 
-.saveBtn {
+.saveBtn { /*styles the save buttons*/
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
@@ -71,7 +71,7 @@ textarea {
   color: white;
 }
 
-.saveBtn i:hover {
+.saveBtn i:hover {/*adds hover effects to save buttons*/
   font-size: 20px;
   transition: all 0.3s ease-in-out;
 }
