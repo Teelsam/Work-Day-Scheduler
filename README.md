@@ -19,8 +19,8 @@ as well as a screenshot of the live site.
 
 ## Third Party APIs and Fonts
 
-[Jquery](https://api.jquery.com/) /n
-[DayJs](https://day.js.org/en/)/n
-[google Fonts](https://fonts.google.com/)/n
-[font awesome](https://fontawesome.com)/n
+[Jquery](https://api.jquery.com/) <br />
+[DayJs](https://day.js.org/en/)<br />
+[google Fonts](https://fonts.google.com/)<br />
+[font awesome](https://fontawesome.com)<br />
 [Bootstrap](https://getbootstrap.com/)
